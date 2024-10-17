@@ -11,9 +11,4 @@ public class BoilWater extends Thread {
         System.out.println("[" + java.lang.Thread.currentThread().getName() + "] Water is boiled!");
 
     }
-
-//    @Override
-//    public void setName(String Name) {
-//        this.threadName = Name;
-//    }
 }

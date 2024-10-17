@@ -1,6 +1,4 @@
 package org.example.objects.and.other.topics;
-
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     //Static Variable
     static int staticVar = 15;
@@ -8,7 +6,6 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("------ Vars Overview: ------");
-        //a Var declared inside a main method
         int localVariable = 10;
         staticVar = 1;
         System.out.println("LocalVar:" + localVariable);

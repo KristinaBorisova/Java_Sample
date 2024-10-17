@@ -13,7 +13,6 @@ public class SpaceShip {
     }
 
     // --Setters
-
     public void setModel(String model) {
         this.model = model;
     }
