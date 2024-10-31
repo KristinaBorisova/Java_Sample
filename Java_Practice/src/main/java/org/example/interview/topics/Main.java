@@ -1,6 +1,7 @@
 package org.example.interview.topics;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
@@ -9,7 +10,7 @@ public class Main {
         //Boat Size = totalSheepWeight / maxBoatCourses
         int boatSize = totalSheepWeight / maxBoatCourses;
         //TODO optimalBoatSize = From Sorted List of sheep weight remove the elements that add up most closely to boat size
-
+        Collections.sort(sheepWeightList);
         return boatSize;
     }
     public static void main(String[] args) {
@@ -17,8 +18,8 @@ public class Main {
 
         //Input 1 - 1<= N <= 1000 (Number of sheep); 1<= K <= 1000  (Max Ship Courses);
         int N = 0, K = 0;
-        //Optimal Sheep Size
-        int optimalSheepSize = 0;
+        //Optimal Boat Size
+        int optimalBoatSize = 0;
         // Sum of weight of all sheep
         int totalSheepWeight = 0;
 
@@ -39,10 +40,10 @@ public class Main {
         }
 
         //Input 2: Weight of sheep
-        System.out.println(" Please enter: the weight of all sheep:");
+        System.out.println(" Please enter the weight of all sheep:");
         for (int i=0; i<N; i++) {
             int sheepWeight = userInput.nextInt();
-            if(sheepWeight <1 || sheepWeight >1000) {
+            if(sheepWeight <1 || sheepWeight >100000) {
                 System.out.println(" Input out of scope, please enter a new value between 1 and 1000");
                 sheepWeight = userInput.nextInt();
             }
@@ -53,8 +54,8 @@ public class Main {
         }
 
         // Output : Max Size of Ship
-        optimalSheepSize = calculateBoatSize(K, totalSheepWeight, sheepWeightList);
-        System.out.println("Ship Size:" + optimalSheepSize);
+        optimalBoatSize = calculateBoatSize(K, totalSheepWeight, sheepWeightList);
+        System.out.println("Boat Size:" + optimalBoatSize);
 
     }
 }
