@@ -10,6 +10,7 @@ public class Main {
         //Boat Size = totalSheepWeight / maxBoatCourses
         int boatSize = totalSheepWeight / maxBoatCourses;
         //TODO optimalBoatSize = From Sorted List of sheep weight remove the elements that add up most closely to boat size
+        //TODO and add constrain for the naxBoatCourses that we can do -> Divide in batches
         Collections.sort(sheepWeightList);
         return boatSize;
     }
